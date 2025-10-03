@@ -1,5 +1,3 @@
-package com.inventory.models;
-
 public class Customer {
     private int id;
     private String name;
@@ -16,8 +14,13 @@ public class Customer {
     public String getName() { return name; }
     public String getEmail() { return email; }
 
+    // Setters
+    public void setId(int id) { this.id = id; }
+    public void setName(String name) { this.name = name; }
+    public void setEmail(String email) { this.email = email; }
+
     @Override
     public String toString() {
-        return id + " | " + name + " | " + email;
+        return String.format("ID: %d | %s | %s", id, name, email);
     }
 }
